@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/mainWindow/backgroud">
+        <file>image/background/logo.jfif</file>
+        <file>image/background/mainBackground.jfif</file>
+    </qresource>
+</RCC>

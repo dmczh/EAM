@@ -1,0 +1,36 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8081,
+        "thread_pool_size": 50,
+        "max_request_size": 10485760,
+        "cors_enabled": true,
+        "cors_origins": ["*"]
+    },
+    "database": {
+        "host": "172.25.130.247",
+        "port": 5432,
+        "name": "eam_db",
+        "user": "auth_user",
+        "password": "${DB_PASSWORD}",
+        "pool_size": 20,
+        "connection_timeout": 5,
+        "idle_timeout": 300
+    },
+    "jwt": {
+        "secret": "9CLZiwLvP/Ojjd8RSaLcg0OFmXT85BCEP2uhPVpUSc0=",
+        "expires_in": 3600,
+        "refresh_expires_in": 604800
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/eam_server.log",
+        "max_size": 10485760,
+        "max_files": 10
+    },
+    "security": {
+        "rate_limit": 100,
+        "rate_period": 60,
+        "require_https": false
+    }
+}
