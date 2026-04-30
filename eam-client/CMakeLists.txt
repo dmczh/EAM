@@ -49,16 +49,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         logger.h logger.cpp
 
         logindialog.h logindialog.cpp logindialog.ui
-        logindialog.h
         backgroundimg.qrc
         mainpagewidget.h mainpagewidget.cpp mainpagewidget.ui
         tokenmanager.h tokenmanager.cpp
-
-
-
-
-
-
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET eam-client APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

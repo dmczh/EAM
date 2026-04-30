@@ -81,7 +81,7 @@ void UserDao::updateLastLogin(int64_t userId)
 // 记录登录日志
 void UserDao::recordLoginAttempt(const std::string &username, const std::string &ip, const std::string &userAgent, bool success)
 {
-    dbClient_->execSqlAsync("INSERT INTO login_attempts (username, ip, user_agent, success) VALUES ($1, $2, $3, $4)", [username](const drogon::orm::Result &result) {
+    dbClient_->execSqlAsync("INSERT INTO login_attempts (username, ip_address, user_agent, success) VALUES ($1, $2, $3, $4)", [username](const drogon::orm::Result &result) {
 
     },
                             [username](const drogon::orm::DrogonDbException &e)

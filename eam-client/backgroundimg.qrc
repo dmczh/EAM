@@ -2,5 +2,6 @@
     <qresource prefix="/mainWindow/backgroud">
         <file>image/background/logo.jfif</file>
         <file>image/background/mainBackground.jfif</file>
+        <file>image/background/mainBackground2.jfif</file>
     </qresource>
 </RCC>

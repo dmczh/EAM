@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "httpclient.h"
+#include "tokenmanager.h"
 
 namespace Ui {
 class LoginDialog;
@@ -19,11 +20,17 @@ public:
 private slots:
     void on_btn_login_clicked();
     void on_btn_Cancle_clicked();
+    void logOut();
 
 private:
     Ui::LoginDialog *ui;
     HttpClient *m_client=nullptr;
+
+    QString m_username;
+    QString m_password;
+
     void on_loginSuccess(const QJsonObject& data);
+    void on_tokenExpired();
 
 signals:
    void loginSuccess(const QJsonObject& data);

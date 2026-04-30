@@ -14,6 +14,7 @@
 class HttpClient:public QObject
 {
     Q_OBJECT
+
 private:
     QNetworkAccessManager *m_network;
     int m_timeout;

@@ -9,6 +9,9 @@
 #include <QStackedWidget>
 #include "mainpagewidget.h"
 #include "tokenmanager.h"
+#include <QVector>
+#include <QTimer>
+#include <QSharedPointer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -36,12 +39,18 @@ private:
     LoginDialog *loginDialog=nullptr;
     QStackedWidget *m_stackedWidegt=nullptr;
     MainPageWidget *m_mainPage=nullptr;
+    TokenData m_tokendata;
+    //背景轮播
     bool m_showBackGround=true;
-    TokenManager *m_tokenManager=nullptr;
+    QVector<QSharedPointer<QPixmap>> m_backGrounds;
+    int m_backGroundIndex=0;
+    QTimer *m_timer=nullptr;
 
     void on_loginSuccess(const QJsonObject& data);
     void loadMainContent();
     void save_UserInfo(const QJsonObject& data);
+    void loadLoginDialog();
+    void on_switchBackGround();
 
 };
 #endif // MAINWINDOW_H
